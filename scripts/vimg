@@ -55,6 +55,7 @@ function draw_preview {
 
 function parse_options {
     extension="${1##*.}"
+    extension="${extension,,}"
     case $extension in
     jpg | png | jpeg | webp | svg)
         draw_preview  imagepreview "$1" $2 $3 $4 $5 $6
