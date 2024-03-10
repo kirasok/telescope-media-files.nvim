@@ -34,7 +34,7 @@ function draw_preview {
       render_at_size "${5}" "${6}" "${2}" "${7}"
 
     elif [[ "$1" == "videopreview" ]]; then
-      if ! command -v viu &> /dev/null; then
+      if ! command -v ffmpegthumbnailer &> /dev/null; then
         echo "ffmpegthumbnailer could not be found in your path,\nplease install it to display video previews"
         exit
       fi
