@@ -40,9 +40,9 @@ function draw_preview {
 		fi
 		path="${2##*/}"
 		echo -e "Loading preview..\nFile: $path"
-		ffmpegthumbnailer -i "$2" -o "${TMP_FOLDER}/${path}.png" -s 0 -q 10
+		ffmpegthumbnailer -i "$2" -o "${TMP_FOLDER}/${path}.jpg" -s 0 -q 10
 		clear
-		render_at_size "${5}" "${6}" "${TMP_FOLDER}/${path}.png" "${7}"
+		render_at_size "${5}" "${6}" "${TMP_FOLDER}/${path}.jpg" "${7}"
 
 	elif [[ "$1" == "pdfpreview" ]]; then
 		path="${2##*/}"
